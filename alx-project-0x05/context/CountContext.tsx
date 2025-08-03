@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 
-interface CounterContextProps{
+interface CountContextProps{
   count: number
   increment: ()=>void
   decrement: ()=>void
@@ -8,10 +8,10 @@ interface CounterContextProps{
 
 
 
-export const countContext = createContext<CounterContextProps | undefined>(undefined)
+export const countContext = createContext<CountContextProps | undefined>(undefined)
 
 
-export const CounterProvider = ({children} : {children: ReactNode}) => {
+export const CountProvider = ({children} : {children: ReactNode}) => {
   const [count, setCount] = useState<number>(0)
 
   const increment = () =>{
